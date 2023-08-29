@@ -4,9 +4,10 @@ import string # Módulo para manipulação de strings
 def gerar_senha(tamanho=8):
     caracteres = string.hexdigits + string.punctuation                  # string.hexdigits = string.digits + string.ascii_letters
     senha = ''.join(random.choice(caracteres) for _ in range(tamanho))  # Gera uma senha aleatória usando os caracteres definidos
+    if caracteres = 
     return senha
 
-print("Bem-vinde ao Gerador de Senhas da Na'linha terça-feira!")
+print("Bem-vinde ao Gerador de Senhas da Na'linha terça-feira!\n")
 comprimento = int(input("Digite o comprimento de senha que deseja: "))
 
 senha_gerada = gerar_senha(comprimento)

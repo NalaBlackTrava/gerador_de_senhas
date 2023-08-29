@@ -1,0 +1,78 @@
+O que você pode escolher agora:
+    tamanho da senha.
+
+Oq qro:
+    Se terá letras repetidas
+        * primeiro não terá 
+        * depois dar a opção
+
+    Se quer carcateres especiais ou não
+
+Ideia:
+    Bem-vinde ao Gerador de Senhas da Na'linha terça-feira!
+
+
+    perguntar o nome da pessoa;
+        Verificar se tem esse nome no banco de dados.
+        Se sim, mostra algo como:  
+            "nossa, que familiar, eu tenho ume amigue com esse nome, é você?
+            Desculpa, só vejo códigos, não consigo te ver."
+
+            "Prova que é você": [ espaço para elu colocar a senha]
+                Se for a certa
+                    pergunta o que precisa
+                    1. gerar nova senha
+                    2. ver as salvas
+
+                    Se 1. segue para "Falar para digitar o comprimeto da senha;"
+                    Caso não, mostrar as senhas salvas associadas à esse nome + senha.
+                Caso seja a errada mostre:
+                    "Você bebeu ou quer me enganar? Eu fui programada pela Nala, não sou boba"
+                    Tente novamente.
+
+                    Depois de 2 tentativas erradas mostre:
+                    "Tá achando que é bagunça?"
+
+                    Depois de 3 tentativas erradas mostre:
+                    "Fica de gracinha que vou tomar providencias"
+
+                    Depois de 4 tentativas erradas mostre:
+                    "Erra dnv que eu saco a navalha. Ou me faço de sonsa"
+
+                    Depois de 4 tentativas erradas mostre:
+                    **Reinicia o programa**
+
+    Falar para digitar o comprimeto da senha;
+    Perguntar se quer caracteres especiais:
+    1. sim
+    2. não
+        Se 1 = caracteres = string.hexdigits + string.punctuation
+        Caso não = caracteres = string.hexdigits
+
+    Perguntar se pode ter repetição:
+    1. sim
+    2. não
+        Se 1 segue como está
+        Caso não, vou fazer a mudança necessária
+
+    Gera a senha: ******
+
+perguntar está boa ou quer outra
+    Se sim, gera outra e repete a pergunta;
+    Caso não, perguntar se ela quer que eu decore de onde é aquela senha
+        Se sim
+            Falar para ela inventar uma senha;
+                guarda a senha em um banco de dados , junto ao nome da pessoa;
+                mostra: "agora somos amigues! Pode deixar, que guardo esse segredo para você"
+
+                pergunta de onde é a senha e coloca uma observação
+                    (se possível, para aumentar sua segurança, coloque um apelido. Ex: senha do twitter => senha do "seu número aproximado de seguidores")
+                salvar a última senha gerada, junto com esse input. (Ex: ljkhq342n = 1.236)
+              
+                Fala algo como "espero que tenha sido útil"
+                    mostra uma contagem decrecente de 10 segundos para reiniciar o programa.
+
+
+        Caso não, fala algo como "espero que tenha sido útil"
+            mostra uma contagem decrecente de 10 segundos para reiniciar o programa.
+
