@@ -1,14 +1,28 @@
-import random # Módulo para geração de números aleatórios
-import string # Módulo para manipulação de strings
+import random
+import string
 
-def gerar_senha(tamanho=8):
-    caracteres = string.hexdigits + string.punctuation                  # string.hexdigits = string.digits + string.ascii_letters
-    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))  # Gera uma senha aleatória usando os caracteres definidos
-    if caracteres = 
+# Função para gerar a senha
+def gerar_senha(tamanho=8, letras_repetidas=False, caracteres_especiais=False):
+    caracteres = string.hexdigits  # hexdigits inclui dígitos e letras em maiúsculas e minúsculas
+    if caracteres_especiais:
+        caracteres += string.punctuation  # Adiciona caracteres especiais se desejado
+    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
+    if not letras_repetidas:
+        senha = ''.join(random.sample(senha, len(senha)))  # Embaralha a senha para evitar letras repetidas
     return senha
 
-print("Bem-vinde ao Gerador de Senhas da Na'linha terça-feira!\n")
-comprimento = int(input("Digite o comprimento de senha que deseja: "))
+# Loop principal
+while True:
+    print("Bem-vinde ao Gerador de Senhas da Na'linha terça-feira! :) \n")
 
-senha_gerada = gerar_senha(comprimento)
-print(f"Sua senha gereada é: {senha_gerada}")
+    comprimento = int(input("Digite o comprimento de senha que deseja: "))
+    letras_repetidas = input("Deseja permitir letras repetidas? (s/n): ").lower() == "s"
+    caracteres_especiais = input("Deseja incluir caracteres especiais? (s/n): ").lower() == "s"
+
+    senha_gerada = gerar_senha(comprimento, letras_repetidas, caracteres_especiais)
+    print(f"Sua senha gerada é: {senha_gerada}")
+
+    continuar = input("Deseja gerar outra senha? (s/n): ").lower()
+    if continuar != "s":
+        print("Obrigada por usar meu Gerador de Senhas!  Até a próxima ✿ ◕ ‿ ◕ ✿")
+        break  # Sai do loop ao escolher "n"

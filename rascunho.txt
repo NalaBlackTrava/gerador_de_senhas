@@ -1,12 +1,8 @@
 O que você pode escolher agora:
-    tamanho da senha.
-
-Oq qro:
-    Se terá letras repetidas
-        * primeiro não terá 
-        * depois dar a opção
-
-    Se quer carcateres especiais ou não
+    Tamanho da senha;
+    Se terá letras repetida;
+    Se quer carcateres especiais;
+    Se quer gerar outra senha.
 
 Ideia:
     Bem-vinde ao Gerador de Senhas da Na'linha terça-feira!
